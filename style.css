@@ -1,0 +1,162 @@
+/* ===== Global Styles ===== */
+body { 
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Remove default underline from links */
+a {
+  text-decoration: none !important;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #5fa7d8 0%, #212a93 100%);
+  padding: 20px 0;
+  font-size: 17px;
+  position: relative;
+}
+
+/* Navigation container */
+nav .container-fluid {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Navigation links */
+nav .navlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  justify-content: end;
+  width: 100%;
+}
+
+/* Individual nav links */
+nav .navlinks > li > a {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  line-height: 0;
+  text-transform: uppercase;
+}
+
+/* Hover effect for nav links */
+nav .navlinks > li > a:hover {
+  background-color: #212a93;
+}
+
+/* Navigation title */
+.navlinks .title {
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+}
+
+/* ===== Submenu Styles ===== */
+.submenu-links {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+}
+
+/* Submenu links */
+.submenu-links > li > a {
+  margin-top: 20px;
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hover effect for submenu links */
+.submenu-links > li > a:hover {
+  font-weight: 600;
+}
+
+/* Styles for the right section of the mega menu */
+.mega-right .submenu-links > li > a {
+  font-size: 16px;
+}
+
+.mega-right .title {
+  color: blue;
+}
+
+.mega-right {
+  padding-left: 50px;
+}
+
+/* Styles for the left section of the mega menu */
+.mega-left {
+  border-right: 1px solid #fff;
+}
+
+/* Display submenu on hover */
+.navlinks > li:hover > .submenu,
+.submenu:hover {
+  opacity: 1;
+  visibility: visible;
+  top: 200%;
+}
+
+/* ===== Logo ===== */
+.logo {
+  max-width: 200px;
+}
+
+/* ===== Quote Button ===== */
+.quote-btn {
+  font-size: 18px;
+  background: #fff;
+  text-transform: uppercase;
+  color: #001998;
+  font-weight: 400;
+}
+
+/* Hover effect for quote button */
+.quote-btn:hover {
+  background: #f1f8fb;
+  color: #000;
+}
+
+/* ===== Submenu Dropdown ===== */
+.submenu {
+  position: absolute;
+  top: 250%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: #282828;
+  box-shadow: rgb(73 70 70 / 62%) 0px 2px 8px 0px;
+  background: linear-gradient(90deg, #00000000, #00000000), url("img/menu-bg.jpgw3.webp");
+  color: #fff;
+  padding: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ===== Responsive Styles ===== */
+@media only screen and (max-width: 992px) {
+  /* Remove border on smaller screens */
+  .mega-left {
+    border: none; 
+  }
+
+  /* Adjust padding for mega-right */
+  .mega-right {
+    padding-left: 15px;
+    margin-top: 50px;
+  }
+}
+
